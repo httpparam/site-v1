@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="socials">
+		<div class="block">
+			<a class="back" href="/">← go back</a>
+			<p class="intro">want to say hi or drop something interesting?</p>
+			<p class="line">reach me fast via email</p>
+			<ul class="list">
+				<li><a href="mailto:me@httpparam.me">email</a> (me@httpparam.me)</li>
+			</ul>
+			<p class="line">hack club: i'm almost always around on slack</p>
+			<ul class="list">
+				<li>
+					<a href="https://hackclub.com/slack" target="_blank" rel="noreferrer">hack club slack</a>
+					 — @param
+				</li>
+			</ul>
+			<p class="line">other spots</p>
+			<ul class="list">
+				<li>
+					<a href="https://github.com/httpparam" target="_blank" rel="noreferrer">github</a>
+					(@httpparam)
+				</li>
+				<li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">linkedin</a> (ask first)</li>
+			</ul>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.socials {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 64px 28px 72px;
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: left;
+		height: 100%;
+	}
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-weight: 700;
+		color: var(--ctp-text);
+		text-decoration: none;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.8);
+		padding-bottom: 4px;
+		width: fit-content;
+	}
+
+	.intro {
+		margin: 0;
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: var(--ctp-text);
+	}
+
+	.line {
+		margin: 0;
+		color: var(--ctp-text);
+		line-height: 1.5;
+	}
+
+	.list {
+		margin: 0;
+		padding-left: 18px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		color: var(--ctp-subtle);
+	}
+
+	.list a {
+		color: var(--ctp-text);
+		text-decoration: none;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.85);
+		padding-bottom: 3px;
+		font-weight: 600;
+	}
+
+	.list a:hover {
+		border-color: rgba(203, 166, 247, 1);
+	}
+
+	@media (max-width: 640px) {
+		.socials {
+			padding: 56px 20px 64px;
+		}
+	}
+</style>
+

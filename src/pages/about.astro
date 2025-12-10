@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="about">
+		<div class="block">
+			<a class="back" href="/">← go back</a>
+			<p class="intro">
+				hey! i'm param — i spend my time crying over physics or chatting away in the
+				<a class="link" href="https://hackclub.com/slack" target="_blank" rel="noreferrer"
+					>hackclub</a
+				>
+				slack.
+			</p>
+			<p class="line">i’m currently obsessed with…</p>
+			<ul class="list">
+				<li>making webapps for everything</li>
+				<li>infrastructure (i dockerize everything)</li>
+				<li>design (i cant design)</li>
+				<li>ai/ml (currently doing andrew ng's course”</li>
+				<li>events, meetupss</li>
+				<li>testing ideas</li>
+				<li>collecting cool tools and tech</li>
+			</ul>
+			<p class="cta">
+				if any of this sounds fun,
+				<a class="hitmeup" href="/socials">hit me up</a> — i’m probably building
+				something questionable anyway.
+			</p>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.about {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 64px 28px 72px;
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: left;
+		height: 100%;
+	}
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-weight: 700;
+		color: var(--ctp-text);
+		text-decoration: none;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.8);
+		padding-bottom: 4px;
+		width: fit-content;
+	}
+
+	.intro,
+	.line,
+	.cta {
+		margin: 0;
+		line-height: 1.6;
+		color: var(--ctp-text);
+	}
+
+	.link {
+		color: var(--ctp-text);
+		text-decoration: none;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.85);
+		font-weight: 700;
+	}
+
+	.link:hover {
+		border-color: rgba(203, 166, 247, 1);
+	}
+
+	.list {
+		margin: 0;
+		padding-left: 22px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		color: var(--ctp-subtle);
+	}
+
+	.list li {
+		line-height: 1.5;
+	}
+
+	.hitmeup {
+		color: var(--ctp-text);
+		text-decoration: none;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.85);
+		font-weight: 700;
+	}
+
+	.hitmeup:hover {
+		border-color: rgba(203, 166, 247, 1);
+	}
+
+	@media (max-width: 640px) {
+		.about {
+			padding: 56px 20px 64px;
+		}
+	}
+</style>
+

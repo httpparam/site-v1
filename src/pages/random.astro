@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="random">
+		<div class="block">
+			<a class="back" href="/">← go back</a>
+			<h1>random bits</h1>
+			<p class="line">
+				a little shelf for whatever i'm tinkering with: snippets, notes, and half-baked ideas.
+			</p>
+			<ul class="list">
+				<li>latest experiment: writing tiny web toys with astro + catppuccin.</li>
+				<li>infra corner: dockerizing things that probably don’t need it.</li>
+				<li>design attempts: gradients, grids, and gentle chaos.</li>
+				<li>reading log: physics tangents and wandering ai papers.</li>
+				<li>todo: break something today, fix it tomorrow.</li>
+			</ul>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.random {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 64px 28px 72px;
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: left;
+		height: 100%;
+	}
+
+	.block {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+	}
+
+	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-weight: 700;
+		color: var(--ctp-text);
+		text-decoration: none;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.8);
+		padding-bottom: 4px;
+		width: fit-content;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 1.6rem;
+		color: var(--ctp-text);
+	}
+
+	.line {
+		margin: 0;
+		color: var(--ctp-subtle);
+		line-height: 1.5;
+	}
+
+	.list {
+		margin: 0;
+		padding-left: 18px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		color: var(--ctp-text);
+	}
+
+	.list li {
+		line-height: 1.5;
+	}
+
+	@media (max-width: 640px) {
+		.random {
+			padding: 56px 20px 64px;
+		}
+	}
+</style>
+

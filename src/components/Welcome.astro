@@ -1,0 +1,78 @@
+---
+---
+
+<main class="page">
+	<section class="hero">
+		<h1>hi 👋, i am param</h1>
+		<p class="lead">i like to do cool stuff</p>
+		<nav class="links">
+			<a href="/about" class="link">about</a>
+			<a href="/socials" class="link">socials</a>
+			<a href="https://hackclub.com" class="link">hackclub</a>
+			<a href="/random" class="link">random</a>
+		</nav>
+	</section>
+</main>
+
+<style>
+	.page {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 40px 24px;
+		max-width: 900px;
+		margin: 0 auto;
+		height: 100vh;
+		transform: translateY(-24px);
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: clamp(36px, 6vw, 52px);
+		line-height: 1.05;
+		color: var(--ctp-text);
+		font-weight: 700;
+	}
+
+	.lead {
+		margin: 0;
+		font-size: 1.1rem;
+		color: var(--ctp-subtle);
+	}
+
+	.links {
+		display: flex;
+		gap: 18px;
+		margin-top: 10px;
+	}
+
+	.link {
+		position: relative;
+		font-weight: 600;
+		color: var(--ctp-text);
+		text-decoration: none;
+		padding-bottom: 4px;
+		border-bottom: 2px solid rgba(203, 166, 247, 0.7);
+	}
+
+	@media (max-width: 640px) {
+		.page {
+			padding: 72px 20px;
+			transform: translateY(-16px);
+		}
+
+		.links {
+			flex-wrap: wrap;
+			gap: 12px 16px;
+		}
+	}
+</style>
