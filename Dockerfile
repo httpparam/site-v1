@@ -25,5 +25,5 @@ RUN npm ci --omit=dev
 COPY --from=build /app/dist ./dist
 
 EXPOSE 4321
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4321"]
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4321", "--allowed-hosts=httpparam.me,www.httpparam.me"]
 
