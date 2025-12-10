@@ -8,7 +8,11 @@ export default defineConfig({
   },
   vite: {
     preview: {
+      host: true,
       allowedHosts: ['httpparam.me', 'www.httpparam.me'],
+    },
+    server: {
+      host: true,
     },
   },
 });
