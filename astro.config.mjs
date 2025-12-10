@@ -6,4 +6,9 @@ export default defineConfig({
   server: {
     host: true, // allow external hosts (0.0.0.0)
   },
+  vite: {
+    preview: {
+      allowedHosts: ['httpparam.me', 'www.httpparam.me'],
+    },
+  },
 });
