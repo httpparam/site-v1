@@ -20,12 +20,12 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=4321
 
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json astro.config.mjs ./
 # install dependencies and prune to production for smaller image
 RUN npm ci --omit=dev
 
 COPY --from=build /app/dist ./dist
 
 EXPOSE 4321
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4321", "--allowed-hosts=httpparam.me,www.httpparam.me"]
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4321", "--allowed-hosts"]
 
